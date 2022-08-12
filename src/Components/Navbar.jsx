@@ -14,17 +14,21 @@ const Navbar = ({user}) => {
           Todo
         </Link>
         <ul>
+
           {
             user?
-            <>
-             <button onClick={()=>{
+            
+            <button onClick={()=>{
             auth.signOut()
-            navigate('/signin')}}style={{ cursor: 'pointer' }}>LOGOUT</button>
-            </>
+            navigate('/signin')}} style={{ cursor: 'pointer'}}>LOGOUT</button>
+             
+            
             :
             <>
             <CustomLink to="/signin">Signin</CustomLink>
             <CustomLink to="/signup">Signup</CustomLink>
+            
+            
          
           </>
           }
